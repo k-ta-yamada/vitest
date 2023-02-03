@@ -17,6 +17,8 @@ import { pwa } from './scripts/pwa'
 import { transformHead } from './scripts/transformHead'
 import { teamMembers } from './contributors'
 
+import configJa from './config.ja'
+
 export default withPwa(defineConfig({
   lang: 'en-US',
   title: vitestName,
@@ -46,6 +48,13 @@ export default withPwa(defineConfig({
       light: 'vitesse-light',
       dark: 'vitesse-dark',
     },
+  },
+  locales: {
+    root: {
+      label: 'English',
+      lang: 'en',
+    },
+    ja: configJa.ja,
   },
   themeConfig: {
     logo: '/logo.svg',
